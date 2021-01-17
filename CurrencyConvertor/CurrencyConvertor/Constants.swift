@@ -7,7 +7,7 @@
 
 import Foundation
 
-let defaultRefreshRate: TimeInterval = 900 /// 30 minutes as requirement
+let defaultRefreshRate: TimeInterval = 1800 /// 30 minutes as requirement
 
 let defaultCurrency: String = "USD"
 let defaultInputValue: Float = 1.0
