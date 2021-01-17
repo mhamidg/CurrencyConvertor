@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CurrencyInputView" customModule="Currency_Conv" customModuleProvider="target">
+            <connections>
+                <outlet property="currencyView" destination="ibZ-I1-CmX" id="vWi-E4-bjs"/>
+                <outlet property="dropdownButton" destination="67b-Du-VB0" id="Bdf-DD-BdN"/>
+                <outlet property="textField" destination="yzN-EX-1Ig" id="Pfe-Yn-f5C"/>
+                <outlet property="updateSwich" destination="CdW-f0-N5z" id="Zbf-Dh-KI3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yzN-EX-1Ig">
+                    <rect key="frame" x="20" y="20" width="374" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="0.20180759050988203" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="xFa-CF-fd0"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67b-Du-VB0">
+                    <rect key="frame" x="254" y="74" width="140" height="36"/>
+                    <color key="backgroundColor" white="1" alpha="0.20351324018263658" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="Hae-RT-UQm"/>
+                        <constraint firstAttribute="height" constant="36" id="Qvv-Ep-QNQ"/>
+                    </constraints>
+                    <connections>
+                        <action selector="dropdownButtonAction:" destination="-1" eventType="touchUpInside" id="etn-pI-fmt"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJW-uv-HUA">
+                    <rect key="frame" x="258" y="78" width="132" height="28"/>
+                    <subviews>
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibZ-I1-CmX" customClass="CurrencyView" customModule="Currency_Conv" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="104" height="28"/>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.up.chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="X7f-KW-LPS">
+                            <rect key="frame" x="104" y="1.5" width="28" height="25"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="X7f-KW-LPS" secondAttribute="height" id="VRW-ef-nBe"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="tGC-kr-BT7">
+                    <rect key="frame" x="20" y="74" width="132" height="36"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto Refresh" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLO-Vb-UtU">
+                            <rect key="frame" x="0.0" y="0.0" width="64" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="64" id="bwv-O6-mHT"/>
+                                <constraint firstAttribute="height" constant="36" id="vwC-tZ-bpI"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CdW-f0-N5z">
+                            <rect key="frame" x="68" y="0.0" width="66" height="36"/>
+                            <connections>
+                                <action selector="updateSwichChangeValue:" destination="-1" eventType="valueChanged" id="WeQ-Fk-KN0"/>
+                            </connections>
+                        </switch>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="yzN-EX-1Ig" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="0v4-qc-EwI"/>
+                <constraint firstItem="gJW-uv-HUA" firstAttribute="width" secondItem="67b-Du-VB0" secondAttribute="width" constant="-8" id="DCo-gr-U8D"/>
+                <constraint firstItem="tGC-kr-BT7" firstAttribute="top" secondItem="yzN-EX-1Ig" secondAttribute="bottom" constant="14" id="FK4-F5-3qa"/>
+                <constraint firstItem="gJW-uv-HUA" firstAttribute="centerY" secondItem="67b-Du-VB0" secondAttribute="centerY" id="Vv5-cd-BO0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="67b-Du-VB0" secondAttribute="trailing" constant="20" id="bb1-Qn-59k"/>
+                <constraint firstItem="gJW-uv-HUA" firstAttribute="height" secondItem="67b-Du-VB0" secondAttribute="height" constant="-8" id="c8f-iO-Xsw"/>
+                <constraint firstItem="gJW-uv-HUA" firstAttribute="centerX" secondItem="67b-Du-VB0" secondAttribute="centerX" id="caB-WV-Vb4"/>
+                <constraint firstItem="67b-Du-VB0" firstAttribute="top" secondItem="yzN-EX-1Ig" secondAttribute="bottom" constant="14" id="d88-ZM-e1w"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yzN-EX-1Ig" secondAttribute="trailing" constant="20" id="dTV-gj-BeZ"/>
+                <constraint firstItem="tGC-kr-BT7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="gGy-3B-0Hq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="67b-Du-VB0" secondAttribute="bottom" constant="20" id="m8u-0k-8cg"/>
+                <constraint firstItem="yzN-EX-1Ig" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="mKh-Cg-ujI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.59999999999999" y="-266.26686656671666"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.up.chevron.down" catalog="system" width="128" height="128"/>
+    </resources>
+</document>
